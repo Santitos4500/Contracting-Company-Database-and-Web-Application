@@ -1,1 +1,1 @@
-# Contracting-Company-Database-and-Web-Application
+•	Constructed a database and associated web application alongside two other colleagues meant to simulate a contracting company and to better organize their data. To complete the task, we used the knowledge we learned during that semester which included database design, SQL, Python, SQLAlchemy, Flask-SQLAlchemy, and PHPMyAdmin. 
