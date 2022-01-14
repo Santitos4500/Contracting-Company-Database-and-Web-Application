@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>All Projects</h1>
+<br />
+{% for project in projectResults %}
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">Project ID: {{ project.projectID }} Customer ID: {{ project.customerID }} Contractor ID: {{ project.contractorID }}</a>	
+            </div>
+            <h2><a class="article-title" href="">{{ project.projDesc }} </a></h2>
+            <p>Start Date: {{ project.startDate }} End Date: {{ project.endDate }}</p>
+            <p>Status: {{ project.projStatus }}</p>
+            <p>Before Image:</p>
+            <img src="static/images/{{ project.beforeImage | default('profile.jpg') }}" alt={{ project.beforeImage }} width="120" height="90"/>
+            <p>After Image:</p>
+            <img src="static/images/{{ project.afterImage | default('profile.jpg') }}" alt={{ project.afterImage }} width="120" height="90"/>
+
+        </div>         
+    </article>
+    {% endfor %}
+{% endblock content %}

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+    {{ current_user.id }}
+    {% for row in outString %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">  
+            </div>
+			<h2><a class="article-title" href="">{{ row.skillName }}</a></h2>
+           
+          </div>
+        </article>
+     {% endfor %}
+{% endblock content %}
